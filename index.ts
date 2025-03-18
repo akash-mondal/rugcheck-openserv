@@ -103,7 +103,7 @@ async function main() {
     const dummyWalletClient = createWalletClient({
         chain: mainnet,
         transport: http(process.env.RPC_PROVIDER_URL),
-    });
+    }) as any;
 
     const wallet = viem(dummyWalletClient);
 
